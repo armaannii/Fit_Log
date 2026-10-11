@@ -10,7 +10,7 @@ const oswald = Oswald({
 
 const Banner = () => {
     return (
-        <div className='container mx-auto flex flex-col lg:flex-row items-center justify-between px-4 lg:px-10 py-6 lg:py-10 bg-[#15171D] rounded-2xl my-6 lg:my-10 gap-8'>
+        <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-4 lg:px-10 py-6 lg:py-10 bg-[#15171D] rounded-2xl my-6 lg:my-10 gap-8'>
             {/* Left Content */}
             <div className='flex-1 text-center lg:text-left'>
                 <h6 className='font-bold text-[14px] text-[#C2F800]'>WORKOUT LIBRARY</h6>
@@ -20,11 +20,11 @@ const Banner = () => {
                 <p className='text-[15px] sm:text-[16px] text-[#9CA3AF] max-w-xl mx-auto lg:mx-0'>
                     FitLog is a dark, no-nonsense gym companion: pick a lift, lock it into today&#39;s plan, and watch the week&apos;s work add up.
                 </p>
-                <Link href="/workouts">
+                <a href="#workout-library">
                     <button className='btn bg-[#C2F800] text-[#000000] font-bold text-[10px] mt-6 outline-none rounded-lg px-6'>
                         BROWSE WORKOUTS
                     </button>
-                </Link>
+                </a>
             </div>
 
             {/* Right Image Container */}

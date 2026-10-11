@@ -81,7 +81,7 @@ const Navbar = () => {
             {lists}
           </ul>
         </div>
-        <div className="navbar-end gap-6">
+        <div className="navbar-end gap-3 sm:gap-6">
           <button>
             <Link href="/myplan"  className=" outline-none"> Plan <span className=" rounded-[46%] font-medium p-0.75 text-black bg-[#9cff00]"> {plans.length} </span> </Link>
           </button>
