@@ -1,14 +1,45 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useContext } from "react";
 import logo from "@/assets/logo.png";
+import { WorkoutContext } from "@/contexts/WorkoutContext";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
 
-    const lists = <>
-        <li><Link href={''}>Workouts</Link></li>
-        <li><Link href={''}>My Plan</Link></li>
-    </>
+    const {plans, saves} = useContext(WorkoutContext);
+
+    const pathname = usePathname(); 
+    const getLinkClasses = (path: string) => {
+      const isActive = pathname === path;
+      
+      return isActive
+        ? "bg-[#233116] text-[#9cff00] font-medium px-4 py-1.5 rounded-full transition-colors"
+        : "text-gray-400 hover:text-white font-medium px-4 py-1.5 rounded-full transition-colors";
+    };
+
+    const navLinks = [
+      { name: "Workouts", href: "/workouts" },
+      { name: "My Plan", href: "/myplan" },
+    ];
+
+    const lists = (
+      <>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href} className={getLinkClasses(link.href)}>
+              {link.name}
+            </Link>
+          </li>
+        ))}
+      </>
+    );
+
+    // const lists = <>
+    //     <li><Link href="/workouts">Workouts</Link></li>
+    //     <li><Link href={'/myplan'}>My Plan</Link></li>
+    // </>
 
     return (
     <div className="border-b-2 border-[#1C1F26]">
@@ -40,7 +71,7 @@ const Navbar = () => {
               {lists}
             </ul>
           </div>
-          <Link href={''} className="text-xl font-medium flex gap-2 outline-none">
+          <Link href="/" className="text-xl font-medium flex gap-2 outline-none">
             <Image src={logo} alt="logo" ></Image>
             FITLOG
           </Link>
@@ -51,8 +82,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-6">
-          <button>Plan</button>
-          <button>Saved</button>
+          <button>
+            <Link href="/myplan"  className=" outline-none"> Plan <span className=" rounded-[46%] font-medium p-0.75 text-black bg-[#9cff00]"> {plans.length} </span> </Link>
+          </button>
+          <button>
+            <Link href="/myplan" className=" outline-none"> Saved <span className="rounded-[45%] font-medium p-0.75 text-[#8A92A0] border-2 border-[#24242d]"> {saves.length} </span> </Link>
+          </button>
         </div>
       </div>
     </div>
