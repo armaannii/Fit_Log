@@ -7,7 +7,7 @@ FitLog is a modern, responsive workout library designed to help users explore ex
 
 
 
-## 1. ✨ Key Features
+# 1. ✨ Key Features
 
 ### 1.1 🏋️ Workout Library
 - Explore a collection of workouts covering major muscle groups.
@@ -43,7 +43,7 @@ FitLog is a modern, responsive workout library designed to help users explore ex
 - Navigate easily with active navigation links, loading states, and custom error handling.
 
 
-## 2 🛠️ Technologies Used
+# 2 🛠️ Technologies Used
 - Next.js => React framework for building the application.
 - React => Component-based user interface.
 - TypeScript => Type safety and maintainable code.
@@ -56,7 +56,7 @@ FitLog is a modern, responsive workout library designed to help users explore ex
 - REST API => Fetching workout data dynamically.
 
 
-## 🚀 Getting Started
+# 🚀 Getting Started
 
 ### Prerequisites
 - Node.js installed
