@@ -13,7 +13,7 @@ const Banner = () => {
             {/* Left Content */}
             <div className='flex-1 text-center lg:text-left'>
                 <h6 className='font-bold text-[14px] text-[#C2F800]'>WORKOUT LIBRARY</h6>
-                <h1 className={`text-[38px] sm:text-[48px] lg:text-[60px] font-extrabold tracking-[-1.5px] leading-tight lg:leading-14 my-4 ${oswald.className}`}>
+                <h1 className={`bg-green-500 text-[38px] sm:text-[48px] lg:text-[60px] font-extrabold tracking-[-1.5px] leading-tight lg:leading-14 my-4 ${oswald.className}`}>
                     TRAIN WITH INTENT. LOG <br className='hidden sm:block'/> EVERY SET.
                 </h1>
                 <p className='text-[15px] sm:text-[16px] text-[#9CA3AF] max-w-xl mx-auto lg:mx-0'>
