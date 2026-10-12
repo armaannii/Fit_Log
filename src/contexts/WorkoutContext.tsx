@@ -8,6 +8,8 @@ interface WorkoutContextType {
   setPlans : React.Dispatch<React.SetStateAction<IWorkout[]>>;
   saves: IWorkout[];
   setSaves: React.Dispatch<React.SetStateAction<IWorkout[]>>;
+  completedWorkouts: string[];
+  setCompletedWorkouts: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 
@@ -16,6 +18,8 @@ export const WorkoutContext = createContext<WorkoutContextType>({
     setPlans: () => {},
     saves: [],
     setSaves: () => {},
+    completedWorkouts: [],
+    setCompletedWorkouts: () => {},
 });
 
 // export const WorkoutContext = createContext<WorkoutContextType | null>(null);
@@ -26,6 +30,8 @@ export const WorkoutProvider = ({children}: {children: ReactNode}) =>{
     const [plans, setPlans] = useState<IWorkout[]>([]);
     const [saves, setSaves] = useState<IWorkout[]>([]);
 
+    const [completedWorkouts, setCompletedWorkouts] = useState<string[]>([]);
+
     // const globalData = {
     //     plans,
     //     setPlans,
@@ -33,8 +39,9 @@ export const WorkoutProvider = ({children}: {children: ReactNode}) =>{
     //     setSaves,
     // }
 
+
     return (
-        <WorkoutContext.Provider value={{ plans, setPlans, saves, setSaves }}>
+        <WorkoutContext.Provider value={{ plans, setPlans, saves, setSaves, completedWorkouts,  setCompletedWorkouts}}>
             {children}
         </WorkoutContext.Provider>
     );

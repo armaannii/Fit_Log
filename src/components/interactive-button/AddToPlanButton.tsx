@@ -2,7 +2,7 @@
 import { WorkoutContext } from "@/contexts/WorkoutContext";
 import { IWorkout } from "@/types/workout.type";
 import { CalendarPlus2 } from "lucide-react";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 
 interface Workout{
@@ -14,17 +14,22 @@ const AddToPlanButton = ({workout}: Workout) => {
 
   const { plans, setPlans, saves } = useContext(WorkoutContext);
   const isAlreadyAdded = plans.some((plan: IWorkout) => plan.id === workout.id);
+  const planListFull = plans.length >= 5;
 
   const handleAddToPlanButton = () => {
-        const alreadyInSavedList = saves.some((save: IWorkout) => save.id === workout.id)
+      const alreadyInSavedList = saves.some((save: IWorkout) => save.id === workout.id)
 
-        if(alreadyInSavedList){
-            toast.error(`"${workout.name}" is already in your wishlist list.`);
-            return;
-        }
+      if(alreadyInSavedList){
+          toast.error(`"${workout.name}" is already in your wishlist list.`);
+          return;
+      }
+      if(planListFull){
+        toast.error(`Plan already contains 5 lifts`);
+        return;
+       }
         
-        setPlans([...plans, workout]);
-        toast.success(`You have read "${workout.name}".`)
+      setPlans([...plans, workout]);
+      toast.success(`${workout.name} is added to plan.`)
   };
   // console.log(plans, "add to plans");
   return (

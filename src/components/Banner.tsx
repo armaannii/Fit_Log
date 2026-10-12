@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import bannerImage from "@/assets/banner.png";
-import Link from 'next/link';
 
 import { Oswald } from "next/font/google";
 const oswald = Oswald({

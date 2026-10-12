@@ -45,6 +45,14 @@ const MyPlanPage = () => {
     }
   };
 
+  //Mark as done 
+  const handleMarkAsDone = (id: number) =>{
+    const workoutDone = plans.find((workout: IWorkout) => workout.id === id);
+    if(workoutDone){
+      toast.success(`"${workoutDone.name}" is complete.`);
+    }
+  }
+
   // function to sort workout lists
   const sortList = useCallback((workouts: IWorkout[]) => {
     const list = [...workouts];
@@ -150,12 +158,13 @@ const MyPlanPage = () => {
         {/* Tab Content Rendering */}
         <div className="space-y-4 sm:space-y-5">
           {activeTab === "plan"
-            ? sortedPlanList.length > 0
+            ? sortedPlanList.length > 0 
               ? sortedPlanList.map((workout: IWorkout) => (
                   <AddedCardList
                     key={workout.id}
                     workout={workout}
                     onDelete={handleDeletePlan}
+                    onMarkAsDone={handleMarkAsDone}
                   />
                 ))
               : emptyCard
