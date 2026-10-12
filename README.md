@@ -57,33 +57,3 @@ FitLog is a modern, responsive workout library designed to help users explore ex
 
 
 
-
-### 🚀 Getting Started
-
-# Prerequisites
-- Node.js installed
-- npm, yarn, pnpm, or bun
-
-# Installation
-
-1. Clone the repository: git clone REPOSITORY_URL
-
-2. Navigate to the project directory: cd fit_log
-
-3. Install dependencies: npm install
-
-4. Start the development server: npm run dev
-
-Open http://localhost:3000 in your browser.
-
-
-# 🌐 Live Demo
-
-Live Website: YOUR_DEPLOYED_WEBSITE_URL
-GitHub Repository: YOUR_GITHUB_REPOSITORY_URL
-
-# 📝 Project Purpose
-
-FitLog was built as a practical project to strengthen my skills in modern web development, including reusable React components, Next.js routing, API integration, TypeScript, responsive UI design, and interactive state management.
-
-© 2026 FitLog — Workout Library. Train hard, log honest.
