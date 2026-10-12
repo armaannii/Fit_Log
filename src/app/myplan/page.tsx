@@ -11,8 +11,8 @@ import { toast } from "react-toastify";
 const MyPlanPage = () => {
   const emptyCard = (
     <section className="flex min-h-45 flex-col items-center justify-center rounded-xl border border-dashed border-[#282831] bg-[#0f0f14] px-4 text-center md:min-h-60 lg:min-h-80">
-      <h2 className="text-xs font-bold tracking-wide">NOTHING HERE YET</h2>
-      <p className="mt-2 text-[10px] text-gray-500">
+      <h2 className="text-[20px] font-bold tracking-wide">NOTHING HERE YET</h2>
+      <p className="mt-2 text-[12px] text-gray-500">
         Browse the library and add a lift to get today moving.
       </p>
       <Link href={"/workouts"}>
@@ -87,7 +87,7 @@ const MyPlanPage = () => {
       {/* Header */}
       <section>
         <h1 className="text-xl font-bold tracking-tight">MY PLAN</h1>
-        <p className="mt-1 text-[10px] text-gray-500">
+        <p className="mt-1 text-[14px] text-gray-500">
           Cap of five lifts for today. Finish them, then load more.
         </p>
       </section>
@@ -95,19 +95,19 @@ const MyPlanPage = () => {
       {/* Dynamic Status Row */}
       <section className="mt-5 flex h-18.5 items-center rounded-lg border border-[#24242d] bg-[#13131b] px-2 sm:px-4">
         <div className="flex min-w-0 flex-1 flex-col justify-center border-r border-[#24242d] pl-2 sm:pl-0">
-          <span className="text-[8px] text-gray-500">Exercises</span>
+          <span className="text-[12px] text-gray-500">Exercises</span>
           <span className="mt-1 text-xl font-bold text-[#9cff00] sm:text-2xl">
             {totalExercises}
           </span>
         </div>
 
         <div className="flex min-w-0 flex-1 flex-col justify-center border-r border-[#24242d] pl-3 sm:pl-6">
-          <span className="text-[8px] text-gray-500">Minutes</span>
+          <span className="text-[12px] text-gray-500">Minutes</span>
           <span className="mt-1 text-xl font-bold sm:text-2xl">{totalMinutes}</span>
         </div>
 
         <div className="flex min-w-0 flex-1 flex-col justify-center pl-3 sm:pl-6">
-          <span className="text-[8px] text-gray-500">Calories</span>
+          <span className="text-[12px] text-gray-500">Calories</span>
           <span className="mt-1 text-xl font-bold sm:text-2xl">{totalCalories}</span>
         </div>
       </section>

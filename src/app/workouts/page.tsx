@@ -31,7 +31,7 @@ const WorkoutsPage = async () => {
         THE LIBRARY
       </h2>
 
-      <p className="mb-6 text-[12px] text-[#9CA3AF] sm:mb-8">
+      <p className="mb-6 text-[14px] text-[#9CA3AF] sm:mb-8">
         Twelve lifts covering every major muscle group.
       </p>
 

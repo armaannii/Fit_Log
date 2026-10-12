@@ -12,7 +12,7 @@ interface AddedCardListProps {
 
 const SaveForLater = ({workout, onDelete}: AddedCardListProps) => {
     return (
-        <div className="flex w-full flex-col gap-4 rounded-2xl border-2 border-[#232732] bg-base-100 p-3 text-white sm:p-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex w-full flex-col gap-4 rounded-2xl border-2 border-[#232732] bg-[#151921] p-3 text-white sm:p-4 lg:flex-row lg:items-center lg:justify-between">
 
             {/* Left Section: Image and Details */}
             <div className="flex min-w-0 items-center gap-3 sm:gap-4">
@@ -65,7 +65,7 @@ const SaveForLater = ({workout, onDelete}: AddedCardListProps) => {
                 {/* View Details Button */}
                 <Link href={`/workouts/${workout.id}`}>
                     <button
-                        className="cursor-pointer rounded-full border border-[#2f2f3f] px-3 py-2 text-xs font-medium text-gray-200 transition-colors hover:bg-[#1f1f2c] sm:px-5 sm:py-2.5 sm:text-sm"
+                        className="cursor-pointer rounded-full border border-[#2f2f3f] px-3 py-2 text-xs font-medium text-gray-200 transition-colors hover:bg-[#1f1f2c] sm:px-5 sm:py-2.5 sm:text-sm outline-none"
                     >
                         View Details
                     </button>

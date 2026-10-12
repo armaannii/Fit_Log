@@ -84,7 +84,7 @@ const AddedCardList = ({workout, onDelete, onMarkAsDone}: AddedCardListProps) =>
                 <Link href={`/workouts/${workout.id}`}>
                     <button
                         // onClick={() => onViewDetails && onViewDetails(workout)}
-                        className="rounded-full border border-[#2f2f3f] px-3 py-2 text-xs font-medium text-gray-200 transition-colors hover:bg-[#1f1f2c] sm:px-5 sm:py-2.5 sm:text-sm cursor-pointer"
+                        className="rounded-full border border-[#2f2f3f] px-3 py-2 text-xs font-medium text-gray-200 transition-colors hover:bg-[#1f1f2c] sm:px-5 sm:py-2.5 sm:text-sm cursor-pointer outline-none"
                     >
                         View Details
                     </button>
